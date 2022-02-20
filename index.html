@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Kesar Cipher</title>
+  </head>
+  <body>
+    <nav
+      class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800"
+    >
+      <div class="flex flex-wrap justify-center items-center">
+        <a href="#" class="flex">
+          <img src="./logo.png" width="180" height="200" />
+        </a>
+      </div>
+      <p class="text-center text-lg font-light text-gray-500">
+        Implementation of the Caesar Cipher encryption algorithm that works with
+        the Ge'ez Alphabet
+      </p>
+    </nav>
+    <main class="p-4">
+      <div
+        class="mb-2 flex flex-wrap justify-between items-center mx-auto gap-2"
+      >
+        <div class="relative flex">
+          <div
+            class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+          >
+            &#x1F5DD;
+          </div>
+          <input
+            type="number"
+            id="key_input"
+            class="shadow-lg bg-gray-50 border-2 border-b-4 border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="key"
+          />
+        </div>
+        <div class="w-full md:block md:w-auto">
+          <button
+            id="encrypt_btn"
+            class="hidden border-2 border-black border-b-4 text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          >
+            Encrypt
+          </button>
+          <button
+            class="hidden border-2 border-black border-b-4 text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            id="decrypt_btn"
+          >
+            Decrypt
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-2">
+        <div class="basis-1/2">
+          <div class="flex">
+            <button
+              type="button"
+              id="toggle_keyboard_btn"
+              class="inline-flex items-center px-3 text-sm text-gray-900 bg-green-200 rounded-l-md border-2 border-r-0 border-b-4 border-black"
+            >
+              &#x2328;
+            </button>
+            <textarea
+              rows="10"
+              id="text_input"
+              class="flex-1 min-w-0 shadow-lg border-2 border-black border-b-4 rounded-none rounded-r-md block p-2.5 w-full text-lg bg-gray-50"
+              placeholder="Insert text"
+            ></textarea>
+          </div>
+        </div>
+        <div
+          class="border-2 rounded-md border-black border-b-4 basis-1/2 bg-gray-50"
+        >
+          <p id="output" class="text-lg text-center">---OUTPUT----</p>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+    >
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        Made with ♥ in Ethiopia
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 sm:mt-0">
+        <li>
+          <a
+            href="https://github.com/eyuelberga/KesarCipher"
+            class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400"
+            >Github</a
+          >
+        </li>
+      </ul>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
